@@ -1,0 +1,42 @@
+@color: #888;
+@bg-color:#eee;
+.border{
+	border: 2px solid #eee;
+}
+body{
+	background: @bg-color;
+}
+.div{
+	height: 200px;
+	width: 200px;
+	span{
+		color: #eee;
+		font-size: 14px;
+	}
+	p{
+		color:3888;
+	}
+	.item{
+		p{
+			color:red;
+		}
+	}
+}
+.clearfix{
+	display: block;
+	zoom: 1;
+	&:after{
+		content: " ";
+		display: block;
+		font-size: 0;
+		height: 0;
+		visibility: hidden;
+		clear: both;
+	}
+}
+.buttom{
+	color: #888;
+	&:hover{
+		background: #eee;
+	}
+}
