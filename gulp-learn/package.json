@@ -18,6 +18,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-rev": "^7.1.0",
     "gulp-rev-collector": "^1.0.5",
-    "gulp-sourcemaps": "^1.6.0"
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-svg-symbols": "^1.0.0"
   }
 }

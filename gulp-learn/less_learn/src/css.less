@@ -40,3 +40,21 @@ body{
 		background: #eee;
 	}
 }
+// 函数
+.div-size(@length:5px){
+	width: @length;
+	height: @length;
+}
+.item{
+	.div-size(20px);
+}
+.item-1{
+	.div-size();
+}
+.wrap(){
+	text-wrap:wrap;
+	white-space: pre-wrap;
+}
+.item-2{
+	.wrap();
+}

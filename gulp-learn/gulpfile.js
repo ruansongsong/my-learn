@@ -8,6 +8,7 @@ var rename = require('gulp-rename');
 var cssnano = require('gulp-cssnano');
 var rev = require('gulp-rev');
 var revCollector = require('gulp-rev-collector');
+var svgSymbols = require('gulp-svg-symbols');
 gulp.task('less', function () {
 	gulp.src('less_learn/src/*.less')
 	.pipe(sourcemaps.init())
@@ -65,4 +66,10 @@ gulp.task('rev', function () {
 		}
 	}))
 	.pipe(gulp.dest('./less_learn/dist/'));
+})
+
+gulp.task('sprite', function () {
+	gulp.src('svg/*.svg')
+	.pipe(svgSymbols())
+	.pipe(gulp.dest('dist/'))
 })
