@@ -58,3 +58,27 @@ body{
 .item-2{
 	.wrap();
 }
+
+#bundle{
+	.button(){
+		width: 20px;
+		height: 20px;
+		background: #eee;
+	}
+	.tab(){
+		width: 100%;
+		height: 50px;
+		background: #000;
+	}
+}
+.test{
+	color: #888;
+	#bundle>.button;
+}
+@red:red;
+.button{
+	@red:blue;
+	.button1{
+		background: @red;
+	}
+}
