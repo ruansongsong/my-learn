@@ -69,7 +69,7 @@ gulp.task('rev', function () {
 })
 
 gulp.task('sprite', function () {
-	gulp.src('svg/*.svg')
+	gulp.src('health_manage_svg/*.svg')
 	.pipe(svgSymbols())
-	.pipe(gulp.dest('dist/'))
+	.pipe(gulp.dest('dist/health_manage.svg'))
 })
