@@ -22,7 +22,7 @@ gulp.task('less', function () {
 	.pipe(gulp.dest('less_learn/dist/'))
 	.pipe(rev.manifest())
 	.pipe(gulp.dest('less_learn/rev/'))
-	.pipe(browserSync.reload({stream: true}));	
+	.pipe(browserSync.reload({stream: true}));
 });
 gulp.task('watch', function () {
 	gulp.watch('less_learn/src/*.less', ['less']);
@@ -69,7 +69,7 @@ gulp.task('rev', function () {
 })
 
 gulp.task('sprite', function () {
-	gulp.src('health_manage_svg/*.svg')
+	gulp.src('ask/*.svg')
 	.pipe(svgSymbols())
-	.pipe(gulp.dest('dist/health_manage.svg'))
+	.pipe(gulp.dest('dist/ask.svg'))
 })
