@@ -1,0 +1,44 @@
+<!--
+处理用户输入
+v-on指令绑定一个监听事件以调用Vue中定义的方法
+v-model，在表单输入和应用状态中做双向数据绑定
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="../js/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<p>{{ message }}</p>
+		<button v-on:click="reverseMessage">Reverse Message</button>
+	</div>
+	<div id="app1">
+		<p>{{ message }}</p>
+		<input v-model="message">
+	</div>
+<script>
+	var app = new Vue({
+		el: '#app',
+		data: {
+			message: 'ruansongsong'
+		},
+		methods: {
+			reverseMessage: function (){
+				this.message = this.message.split('').reverse().join('');
+			}
+		}
+	});
+	var app1 = new Vue({
+		el: '#app1',
+		data: {
+			message: 'ruansongsong'
+		}
+	})
+</script>
+</body>
+</html>

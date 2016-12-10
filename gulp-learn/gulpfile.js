@@ -59,12 +59,7 @@ gulp.task('test', function () {
 // });
 gulp.task('rev', function () {
 	gulp.src(['./less_learn/rev/*.json', './less_learn/rev/*.html'])
-	.pipe(revCollector({
-		replaceReved: true,
-		dirReplacements: {
-			'css/': './less_learn/dist/'
-		}
-	}))
+	.pipe(revCollector())
 	.pipe(gulp.dest('./less_learn/dist/'));
 })
 

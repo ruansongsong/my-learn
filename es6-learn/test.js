@@ -51,12 +51,72 @@
 // });
 // console.log(points);
 // console.log(points.sort);
-var toString = Object.prototype.toString;
-var isType = function (type) {
-	return function (obj) {
-		return toString.call(obj) == '[object ' + type + ']';
-	}
+// var toString = Object.prototype.toString;
+// var isType = function (type) {
+// 	return function (obj) {
+// 		return toString.call(obj) == '[object ' + type + ']';
+// 	}
+// }
+// var isString = isType('String');
+// var a = 'hhh';
+// console.log(a.isString);
+// function add(a, b){console.dir(this);}
+// function sub(a, b){console.dir(this);}
+// add(1,2);
+// "window"
+// sub(1,2);
+// "window"
+// add.call(sub, 1, 2);
+// "function sub(a, b)..."
+// sub.apply(add, [1, 2]);
+// "function add(a, b)..."
+//
+// function setColor(color){
+// 	this.style.color = color;
+// }
+// var p = document.getElementById('title');
+// window.setColor.call(p, "#ddd");
+//
+// "use strict";
+// let a = 'song';
+// let b = Array.form(a);
+// console.log(b);
+// console.log(this);
+// var name = "The Window";
+// 　　var object = {
+// 　　　　name : "My Object",
+// 　　　　getNameFunc : function(){
+// 　　　　　　return function(){
+// 　　　　　　　　return this.name;
+// 　　　　　　};
+// 　　　　}
+// 　　};
+// 　　console.log(object.getNameFunc()())
+// var name = "The Window";
+// 　　var object = {
+// 　　　　name : "My Object",
+// 　　　　getNameFunc : function(){
+// 　　　　　　var that = this;
+// 　　　　　　return function(){
+// 　　　　　　　　return that.name;
+// 　　　　　　};
+// 　　　　}
+// 　　};
+// 　　console.log(object.getNameFunc()());
+
+// function outer() {
+// 	var a = 2;
+// 	function inner() {
+// 		console.log(a);
+// 	}
+// 	return inner;
+// }
+// var a = outer();
+// a();
+for (var i = 0; i <= 5; i++) {
+	(function (j){
+		setTimeout(function () {
+			console.log(j);
+		},1000);
+	})(i)
 }
-var isString = isType('String');
-var a = 'hhh';
-console.log(a.isString);

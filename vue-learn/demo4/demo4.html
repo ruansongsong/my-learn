@@ -1,0 +1,37 @@
+<!--
+
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="../js/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<ul>
+			<!-- create an instance of the todo-item componet -->
+			<todo-item v-for="todo in todos" v-bind:todo="todo"></todo-item>
+		</ul>
+	</div>
+<script>
+	// define a new component called todo-item
+	Vue.component('todo-item', {
+		props: ['todo'],
+		template: '<li>{{ todo.text }}</li>'
+	})
+	var app = new Vue({
+		el: '#app',
+		data: {
+			todos: [
+				{ text: 'ruansongsong' },
+				{ text: 'softsongsong' }
+			]
+		}
+	})
+</script>
+</body>
+</html>

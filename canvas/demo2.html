@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>canvas demo1</title>
+</head>
+<body>
+	<canvas id="canvas" width="300" height="300">
+		<p>看不到的替换内容</p>
+	</canvas>
+	<script type="text/javascript">
+		var drawing = document.getElementById('canvas');
+		var content = drawing.getContext("2d");
+		content.fillStyle = "rgb(200, 0, 0)";
+		content.fillRect(10, 10, 55, 50) // x坐标，y坐标，宽度，高度
+		content.fillStyle = "rgba(0, 0, 200, 0.5)";
+		content.fillRect(30, 30, 55, 50);
+	</script>
+</body>
+</html>

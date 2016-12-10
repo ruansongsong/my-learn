@@ -1,0 +1,44 @@
+<!--
+条件与循环
+这个例子演示了我们不仅可以绑定DOM文本到数据，也可绑定DOM结构到数据
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="../js/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<p v-if="seen">Now you see me</p>
+	</div>
+	<div id="app1">
+		<ol>
+			<li v-for="todo in todos">
+				{{ todo.text }}
+			</li>
+		</ol>
+	</div>
+<script>
+	// vue也可以提供过度效果
+	var app = new Vue({
+		el: '#app',
+		data: {
+			seen: true
+		}
+	})
+	var app1 = new Vue({
+		el: '#app1',
+		data: {
+			todos: [
+				{ text: 'bill' },
+				{ text: 'lucy' }
+			]
+		}
+	})
+</script>
+</body>
+</html>
