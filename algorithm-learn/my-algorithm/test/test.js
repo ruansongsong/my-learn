@@ -1,15 +1,22 @@
-// var L = require('../data-structures/list');
-// var List = new L.List();
-// List.append('1');
-// List.append('2');
-// List.append('songsong');
-// console.log(List.toString());
-// // List.next()
-// console.log(List.currPos());
-// console.log(List.length());
-// for(List.front(); List.currPos() < List.length() - 1; List.next()){
-// 	console.log(List.getElement());
-// }
-var a = [1, 2, 3];
-a.pop();
-console.log(a);
+function stringToLowerCase(s) {
+  var sArray = s.split('');
+  var result = [];
+  sArray.forEach(function(item, index, array) {
+    if((item >= 'a' && item <= 'z') || (item >= 'A' && item <= 'Z')) {
+      result.push(item.toLowerCase());
+    }
+  })
+  return result.join('');
+}
+
+var readline = require('readline');
+const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+});
+rl.on('line', function(line){
+   console.log(stringToLowerCase(line));
+});
+
+// var s = 'abc';
+// console.log(s.split(''));
